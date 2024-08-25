@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+</head>
+<body>
+    <header class="header"><h1 class="logo">Todo App</h1></header>
+    <main>
+        <div class="todo-app">
+            <button id="open-form-btn" class="todo-btn btn">Add New Task</button>
+            <!-- Task Form-->
+            <form class="task-form hidden" id="task-form">
+                <div class="task-form-header">
+                    <button class="close-form-btn inner-btn" id="close-form-btn" type="button">Discard</button>
+                </div>
+                <div class="task-form-body hidden">
+                    <label for="title">Title:</label>
+                    <input id="title" name="title" type="text" value="" required/>
+                    <label for="due-date">Due Date:</label>
+                    <input id="due-date" name="due-date" type="date" required/>
+                    <label for="priority">Priority:</label>
+                    <select  id="priority" name="priority" required>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" cols="30" maxlength="300"></textarea>
+                </div>
+                <div class="task-form-footer">
+                    <button id="add-or-update-task-btn" class="inner-btn" type="submit">Add Task</button>
+                </div>
+            </form>
+        </div>
+        <!--Task List-->
+        <div class="tasks-container"></div>
+    </main>
+    <script src="index.js" defer></script>
+</body>
+</html>
